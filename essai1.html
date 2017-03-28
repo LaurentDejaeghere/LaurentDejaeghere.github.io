@@ -22,7 +22,8 @@
 		<li><a href="#balise_pour_l_affichage_du_code">Balises pour facilité l'affichage de code</a></li>
 		<li><a href="#lien_hypertexte">Lien hypertexte</a></li>
 		<li><a href="#le_sectionnement_de_la_page">Le sectionnement de la page</a></li>
-		
+		<li><a href="#les_images">Les images</a></li>
+		<li><a href="#les_tableaux">Les tableaux</a></li>
 	
 	</nav>
 	<section>
@@ -135,27 +136,130 @@ permet de garder les sauts de ligne,	tabulations, etc.
 		
 		
 	  <h2 id="le_sectionnement_de_la_page">Le sectionnement de la page</h2>
-	  <p>Une page se sectionne généralement en cinq partie : 
-	  l'en-tête, le menu de navigation, la partie centrale de la page,
-	  une partie reservée aux choses annexes telles que les pubs
-	  ou les définitions de mots particuliers, et enfin le bas de page.
-	  </p>
-	  <ul>
-		<li>L'en-tête est positionné à l'aide de la balise &lt;header&gt; &lt;/header&gt;</li>
-		<li>Le menu de navigation est positionné à l'aide de la balise &lt;nav&gt; &lt;/nav&gt;</li>
-		<li>La partie centrale de la page est positionnée à l'aide des balise &lt;section&gt; &lt;/section&gt; et &lt;article&gt; &lt;/article&gt;</li>
-		<li>La partie reservée aux choses annexes est positionnée  à l'aide de la balise &lt;aside&gt; &lt;/aside&gt;</li>
-		<li>Le bas de page est positionné à l'aide de la balise &l;theader&gt; &lt;/header&gt;</li>
-	  </ul>
+	    <p>Une page se sectionne généralement en cinq partie : 
+	    l'en-tête, le menu de navigation, la partie centrale de la page,
+	    une partie reservée aux choses annexes telles que les pubs
+	    ou les définitions de mots particuliers, et enfin le bas de page.
+	    </p>
+	    <ul>
+		  <li>L'en-tête est positionné à l'aide de la balise &lt;header&gt; &lt;/header&gt;</li>
+		  <li>Le menu de navigation est positionné à l'aide de la balise &lt;nav&gt; &lt;/nav&gt;</li>
+		  <li>La partie centrale de la page est positionnée à l'aide des balise &lt;section&gt; &lt;/section&gt; et &lt;article&gt; &lt;/article&gt;</li>
+		  <li>La partie reservée aux choses annexes est positionnée  à l'aide de la balise &lt;aside&gt; &lt;/aside&gt;</li>
+		  <li>Le bas de page est positionné à l'aide de la balise &l;theader&gt; &lt;/header&gt;</li>
+	    </ul>
 	  
-	  <h2 id="les images">Les images</h2>
-	  <p>Il est possible d'afficher des images à l'aide d'une balise &lt;img src="chemin_d'acces_de_l_image"&gt; alt="description_de_l_image"&gt;</p>
-	  <img src="dragon.jpg" alt="Une belle image de dragon récupérée sur le net">
-	  <p>Remarque : la description de l'image est afficher en cas de problèmes d'affichage de l'image et est utilisé par les robots de lecture html.</p>	  
-	  <p>il parait cependant que les chatons sont plus populaire</p>
-	  <img src="chat_shreck.jpg" alt="Le chat de shreck">
-      <p>Nous resterons donc neutre sur ce site en affichant une image plus traditionnelle</p>	  
-	  <img src="starwars.jpg" alt="image de starwars">
+	  <h2 id="les_images">Les images</h2>
+	  
+	    <p>Il est possible d'afficher des images à l'aide d'une balise &lt;img src="chemin_d'acces_de_l_image"&gt; alt="description_de_l_image"&gt;</p>
+	    <img src="dragon.jpg" alt="Une belle image de dragon récupérée sur le net">
+	    <p>Remarque : la description de l'image est afficher en cas de problèmes d'affichage de l'image et est utilisé par les robots de lecture html.</p>	  
+	    <p>il parait cependant que les chatons sont plus populaire</p>
+	    <img src="chat_shreck.jpg" alt="Le chat de shreck">
+        <p>Nous resterons donc neutre sur ce site en affichant une image plus traditionnelle</p>	  
+	    <img src="starwars.jpg" alt="image de starwars">
+	    <p>Remarque : cette balise marche aussi pour les .gif</p>
+	    <img src="chaussures.gif" alt="image de chaussures qui marchent toutes seules"><img src="mjackson.gif" alt="mickaël Jackson dansant">
+	  
+	  <h2 id="les_tableaux">Les Tableaux</h2>
+	    
+		<p>Les tableaux en HTML ne comporte pas de colonnes. Ils sont gérés commme un empilement de ligne. Chaque ligne peut comporter un nombre différent de case des autres lignes</p>
+		<p>Un tableau se déclare avec la balise &lt;table&gt;. Chaque ligne se déclare avec la balise &lt;tr&gt;. Chaque case se déclare avec la balise &lt;td&gt;.</p>
+		<p>Il existe des balises spécifiques pour la première ligne du tableau &lt;thead&lt; et la dernière ligne &lt;tfoot&lt;. Ces balises viennent remplacer la balise &lt;tr&gt; au niveau de leur ligne respective.</p>
+		<p>Il est également possible de mettre en valeur une case spécifique en utilisant la balise &lt;th&gt;.</p>
+		<p>Par tradition, dans la déclaration d'un tableau, la première et la dernière ligne sont déclarées avant les autres lignes de ce même tableau. </p>
+		<p>Il est également possible de déclarer une case d'une taille équivalente à plusieurs cases. Pour ce faire on utilise la balise &lt;td rowspan="2" colspan="2"&gt;</p>
+		<p>Enfin, il est possible de donner une légende au tableau grâce à la balise &lt;caption&gt;</p>
+		<p>Exemple : </p>
+		<pre>
+		&lt;table&gt;&lt;caption&gt;Ma légende du tableau&lt;/caption&gt;
+		  &lt;thead&gt;
+		    &lt;th colspan="2"&gt;Arisochat&lt;/th&gt;
+			&lt;th&gt;Bateau sur l'eau&lt;/th&gt;
+			&lt;th&gt;C'est marrant&lt;/th&gt;
+		  &lt;/thead&gt;
+		  &lt;tfoot&gt;
+		    &lt;th&gt;koalaaaaa&lt;/th&gt;
+			&lt;th&gt;looping youhou&lt;/th&gt;
+			&lt;th&gt;mamamia!&lt;/th&gt;
+		  &lt;/tfoot&gt;
+		  &lt;tr&gt;
+		    &lt;th&gt;Journée facile&lt;/th&gt;
+			&lt;th&gt;Journée facile&lt;/th&gt;
+			&lt;th&gt;Journée facile&lt;/th&gt;
+			&lt;th&gt;Journée facile&lt;/th&gt;
+			&lt;th&gt;Journée facile&lt;/th&gt;
+			&lt;th&gt;Journée facile&lt;/th&gt;
+			&lt;th&gt;Journée facile&lt;/th&gt;
+		  &lt;/tr&gt;
+		  &lt;tr&gt;
+		    &lt;td rowspan="3" colspan="3"&gt;Donnons plus de notre temps&lt;/td&gt;
+			&lt;td&gt;Ecole d'informatique&lt;/td&gt;
+		  &lt;/tr&gt;
+		  &lt;tr&gt;
+		    &lt;td&gt;Foutaise&lt;/td&gt;
+			&lt;td&gt;Grincheux&lt;/td&gt;
+			&lt;td&gt;Ho lalalalalalala!!&lt;/td&gt;
+		  &lt;/tr&gt;
+		  &lt;tr&gt;
+		    &lt;th&gt;Irruption chez moi&lt;/th&gt;
+		  &lt;/tr&gt;
+		  &lt;tr&gt;
+		    &lt;th&gt;Journée difficile&lt;/th&gt;
+			&lt;th&gt;Journée difficile&lt;/th&gt;
+			&lt;th&gt;Journée difficile&lt;/th&gt;
+			&lt;th&gt;Journée difficile&lt;/th&gt;
+			&lt;th&gt;Journée difficile&lt;/th&gt;
+			&lt;th&gt;Journée difficile&lt;/th&gt;
+			&lt;th&gt;Journée difficile&lt;/th&gt;
+		  &lt;/tr&gt;
+		&lt;/table&gt;		
+		</pre>
+		<table><caption>Ma légende du tableau</caption>
+		  <thead>
+		    <th colspan="2">Arisochat</th>
+			<th>Bateau sur l'eau</th>
+			<th>C'est marrant</th>
+		  </thead>
+		  <tfoot>
+		    <th>koalaaaaa</th>
+			<th>looping youhou</th>
+			<th>mamamia!</th>
+		  </tfoot>
+		  <tr>
+		    <td>Journée facile</td>
+			<td>Journée facile</td>
+			<td>Journée facile</td>
+			<td>Journée facile</td>
+			<td>Journée facile</td>
+			<td>Journée facile</td>
+			<td>Journée facile</td>
+		  </tr>
+		  <tr>
+		    <td rowspan="3" colspan="3">Donnons plus de notre temps</td>
+			<td>Ecole d'informatique</td>
+		  </tr>
+		  <tr>
+		    <td>Foutaise</td>
+			<td>Grincheux</td>
+			<td>Ho lalalalalalala!!</td>
+		  </tr>
+		  <tr>
+		    <th>Irruption chez moi</th>
+		  </tr>
+		  <tr>
+		    <td>Journée difficile</td>
+			<td>Journée difficile</td>
+			<td>Journée difficile</td>
+			<td>Journée difficile</td>
+			<td>Journée difficile</td>
+			<td>Journée difficile</td>
+			<td>Journée difficile</td>
+		  </tr>
+		</table>
+	  
+	  
+	  
 	  </section>
 	<aside>
       <ul><p> Liste de liens utiles pour aller plus loin :</p>
