@@ -6,32 +6,48 @@
     <title> HTML pour débutant</title>
   </head>
   <body>
-    <h1>Les béaba du HTML</h1>
+	
+    <header><h1>Les béaba du HTML</h1>
 	    <p> Sur cette page HTML, nous allons voir toute les <em>balises</em> nécessaire.
-		 Une balise est un mot clé du code html qui est marqué entre ces deux caractères : ' &lt ' ' &gt '.		
+		 Une balise est un mot clé du code html qui est marqué entre ces deux caractères : ' &lt; ' ' &gt; '.		
 		</p>
-	<h2>les premières lignes</h2>
+	</header>
+	<nav>
+	  <ul>
+	    <li><a href="#les_premieres_lignes">Les premières lignes</a></li>
+		<li><a href="#la_declaration_de_titre">La déclaration de titres</a></li>
+		<li><a href="#la_mise_en_valeur_de_certains_termes">La mise en valeur de certains termes</a></li>
+		<li><a href="#les_termes_et_les_definitions">Les termes et les définitions</a></li>
+		<li><a href="#les_echapements">Les échapements</a></li>
+		<li><a href="#balise_pour_l_affichage_du_code">Balises pour facilité l'affichage de code</a></li>
+		<li><a href="#lien_hypertexte">Lien hypertexte</a></li>
+		<li><a href="#le_sectionnement_de_la_page">Le sectionnement de la page</a></li>
+		
+	
+	</nav>
+	<section>
+	  <h2 id="les_premieres_lignes">Les premières lignes</h2>
 	    <p>
-  	      le document html doit commencer par l'intitulé :  &lt!doctype html&gt. 
+  	      le document html doit commencer par l'intitulé :  &lt;!doctype html&gt;. 
 		   Cet intitulé indique la version du code html. S'il est seul, alors c'est la version HTML5 qui est la dernière version actuelle (mars 2017).
 	    </p>
 	    <p>
-  	      il est ensuite suivi par l'intitulé :  &lthtml&gt.  Cet intitulé indiqueque la suite du code sera en language html.
+  	      il est ensuite suivi par l'intitulé :  &lt;html&gt;.  Cet intitulé indique que la suite du code sera en language html.
 	    </p>
         <p>
-		  Après ces deux balises viens la balise  &lthead&gt qui va comprendre toute les informations générales du document.
-		  Ces informations générales doivent contenir la balise &ltmeta charset="utf-8"; /&gt</dt> ainsi que la balise &lttitle&gt qui sera fermée par la balise &lt/title&gt</dt>.
-		  On notera au passage que la balise &ltmeta charset="utf-8"; /&gt contient son / à la fin de la balise. On appel ce type de balise une balise autofermante.
+		  Après ces deux balises viens la balise  &lt;head&gt; qui va comprendre toute les informations générales du document.
+		  Ces informations générales doivent contenir la balise &lt;meta charset="utf-8"; /&gt;</dt> ainsi que la balise &lt;title&gt; qui sera fermée par la balise &lt;/title&gt;</dt>.
+		  On notera au passage que la balise &l;tmeta charset="utf-8"; /&gt; contient son / à la fin de la balise. On appel ce type de balise une balise autofermante.
 		  La première de ces balise définit le type caractères utilisé ici utf-8.La seconde balise permet d'afficher un titre dans l'onglet de votre navigateur, ici "HTML pour débutant".
 		</p>
 		<p>
-		  Lorsque tout les champs sont remplis, il est temps de fermer la balise &lthead&gt pour ouvrir la partie principale du code, à savoir, la balise &ltbody&gt
+		  Lorsque tout les champs sont remplis, il est temps de fermer la balise &lt;head&gt; pour ouvrir la partie principale du code, à savoir, la balise &lt;body&gt;
         </p>
 		<p>
 		  remarque : il peut être pratique de fermer directement les balises head et html puis ensuite d'écrire le code à l'intérieur de ces balises. De cette manière, cela ne sera pas oublié par la suite.
         </p>		
 	  
-	  <h2>La déclaration de titres</h2>
+	  <h2 id="la_declaration_de_titre">La déclaration de titres</h2>
 	    <p> La délcaration de titre peut comprendre jusqu'à <mark>5 niveaux</mark> de titre.</p>
 		<p> Le <strong>titre</strong> est indiqué par la balise &lt;h1&gt; et se termine par la balise &lt/h1&gt;.</p>
 		<p> Les différents niveaux de sous-titre sont déclaré de la même manière à partir de h2 jusqu'à h6. Voici ci-dessous un exemple d'affichage</p>
@@ -46,8 +62,8 @@
 			 <h6> plusieurs h6 par document, la balise &lt;h6&gt; est la dernière indentation de paragraphe possible </h6>
 			   <p>Mon texte</p>
 			   
-      <h2>La mise en valeur de certains termes</h2>
-	    <p>Il est possible de mettre en <em> importance</em> un terme grace à la balise &ltem&gt </p>
+      <h2 id="la_mise_en_valeur_de_certains_termes">La mise en valeur de certains termes</h2>
+	    <p>Il est possible de mettre en <em> importance</em> un terme grace à la balise &lt;em&gt; </p>
 		<p> Quelque chose d'encore plus <strong> important </strong> sera donnée par la balise strong </p>
 		<p>Par contre, une chose moins <mark> importante </mark> sera qualifiée par la balise mark </p>
 	  <h2>les listes</h2>
@@ -65,7 +81,7 @@
 		  <li>les listes non-ordonnées commencent par une balise &lt;ul&gt; (unordered list) </li>
 		</ul>
 	
-	  <h2>Les termes et les définitions</h2>
+	  <h2 id="les_termes_et_les_definitions">Les termes et les définitions</h2>
   
 	    <p>on utilise la balise &lt;dl&gt; pour ouvrir un terme ou une definition, lorsque ceci est réalisé, il faut lister les termes et les définitions</p>
 		  <dl>
@@ -76,11 +92,11 @@
 			  <dd> on ajoute une deuxième une balise &lt;dd&gt; la définition </dd>
 		  </dl>
   
-	  <h2>les échapements</h2>
+	  <h2 id="les_echapements">Les échapements</h2>
 		
 		<p> Pour afficher les cararctères ' &lt; ', ' &gt; ' et ' &amp; ' il faut utiliser respectivement le code : &amp;lt;, &amp;gt; et &amp;amp; </p>
  
-	  <h2>Balises pour facilité l'affichage de code</h2>
+	  <h2 id="balise_pour_l_affichage_du_code">Balises pour facilité l'affichage de code</h2>
 		<p>rien de tel qu'un exemple !</p>	
 		<code>
 		La balise code permet d'afficher tout les caratères avec une taille unique dans la balise.
@@ -89,12 +105,68 @@
 		<pre>La balise &lt;pre&gt;
 permet de garder les sauts de ligne,	tabulations, etc.
 		</pre>
+		
+		
+	  <h2 id="lien_hypertexte">Lien hypertexte</h2>
+		
+		<p>Un lien hypertexte s'écrit de la manière suivante : &lt;a href="chemin_du_lien"&gt;
+		"texte_sur_lequel_il_faut_cliquer_pour_activer_le_lien"&lt;/a&gt;.
+		</p>
+		<p><a href="lien_un.html">"mon premier lien"</a></p>
+		<p>Un lien hypertexte peut également faire référence à une balise de la page référencé par un identifiant.
+		Pour donner un identifiant <em>unique</em> à une balise, il faut ajouter id="nom_de_l_identifiant_unique" dans la balise.
+		Pour indiquer que le lien hypertexte est dans la page, il faut au niveau du lien ajouter le caractère #.
+		</p>
+		<p>Exemple : &lt;a href="<em>#</em>"chemin_du_lien_du_document"&gt;"texte_sur_lequel_il_faut_cliquer_pour_activer_le_lien"&lt;/a&gt;</p>
+		<p>De la même manière, il est possible de créer un lien sur une balise d'une autre page : </p>
+        <p>Exemple : &lt;a href="http://mon_url.html<em>#</em>"chemin_du_lien_du_document"&gt;"texte_sur_lequel_il_faut_cliquer_pour_activer_le_lien"&lt;/a&gt;</p>		
+	    <p>Un autre attribut de la balise &lt;a&gt; est l'attribut target. Cet attribut indique où afficher la ressource liée. 
+		Il s'agit du nom, ou du mot-clé, d'un contexte de navigation (exemple : onglet, fenêtre, frameset). 
+		Les mots-clés suivants ont un sens particulier :
+		<ul>
+		  <li>_blank : charge la réponse dans un nouveau contexte de navigation (nouvel onglet : <a href="lien_un.html" target="_blank">"mon premier lien"</a>).C'est le plus utilisé.</li>
+		  <li>_self : charge la réponse dans le contexte de navigation courant. Il s'agit de la valeur par défaut quand l'attribut n'est pas renseigné.</li>
+          <li>_parent : charge la réponse dans le &lt;frameset&gt; dans le contexte de navigation HTML5 parent relativement au contexte courant. S'il n'y a pas de parent, l'option se comporte de la même façon que _self.</li>
+          <li>_top : charge la réponse dans le contexte de navigation de plus haut niveau (c'est à dire, le contexte de navigation parent par rapport à l'actuel, et qui n'a lui-même aucun parent). S'il n'y a pas de parent, l'option se comporte de la même façon que _self.</li>
+		</ul>
+		<p>Exemple : href="http://mon_url.html<em>#</em>"chemin_du_lien_du_document" target="_blank"&gt;"texte_sur_lequel_il_faut_cliquer_pour_activer_le_lien"&lt;/a&gt;</p>
+		<p>Plus de détails peuvent être trouvés sur <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/a">https://developer.mozilla.org/fr/docs/Web/HTML/Element/a</a>
+
+		
+		
+	  <h2 id="le_sectionnement_de_la_page">Le sectionnement de la page</h2>
+	  <p>Une page se sectionne généralement en cinq partie : 
+	  l'en-tête, le menu de navigation, la partie centrale de la page,
+	  une partie reservée aux choses annexes telles que les pubs
+	  ou les définitions de mots particuliers, et enfin le bas de page.
+	  </p>
+	  <ul>
+		<li>L'en-tête est positionné à l'aide de la balise &lt;header&gt; &lt;/header&gt;</li>
+		<li>Le menu de navigation est positionné à l'aide de la balise &lt;nav&gt; &lt;/nav&gt;</li>
+		<li>La partie centrale de la page est positionnée à l'aide des balise &lt;section&gt; &lt;/section&gt; et &lt;article&gt; &lt;/article&gt;</li>
+		<li>La partie reservée aux choses annexes est positionnée  à l'aide de la balise &lt;aside&gt; &lt;/aside&gt;</li>
+		<li>Le bas de page est positionné à l'aide de la balise &l;theader&gt; &lt;/header&gt;</li>
+	  </ul>
+	  
+	  <h2 id="les images">Les images</h2>
+	  <p>Il est possible d'afficher des images à l'aide d'une balise &lt;img src="chemin_d'acces_de_l_image"&gt; alt="description_de_l_image"&gt;</p>
+	  <img src="dragon.jpg" alt="Une belle image de dragon récupérée sur le net">
+	  <p>Remarque : la description de l'image est afficher en cas de problèmes d'affichage de l'image et est utilisé par les robots de lecture html.</p>	  
+	  <p>il parait cependant que les chatons sont plus populaire</p>
+	  <img src="chat_shreck.jpg" alt="Le chat de shreck">
+      <p>Nous resterons donc neutre sur ce site en affichant une image plus traditionnelle</p>	  
+	  <img src="starwars.jpg" alt="image de starwars">
+	  </section>
+	<aside>
+      <ul><p> Liste de liens utiles pour aller plus loin :</p>
+		<li><a href="https://developer.mozilla.org/fr/docs/Web/HTML">"developer.mozilla.org/fr/docs/Web/HTML"</a></li>
+	  </ul>
+	</aside>
+	<footer>
+	<p>Ce site internet est mon premier site, soyez indulgent et n'hésitez pas à me proposer vos idées pour son amélioartion. Bonne navigation !</p>
+	</footer>
 
   </body>
 </html>
   
   
-  
-  
-  </body>
-</html>
