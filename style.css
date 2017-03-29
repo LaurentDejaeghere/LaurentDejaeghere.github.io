@@ -1,0 +1,175 @@
+.carre1 {
+  height : 150px;
+  width : 150px;
+  color : #FFFFFF;
+  background-color : rgb(255,255,255);
+  text-align : center;
+  vertical-align : middle;
+  line-height: 150px;  
+}
+.carre2 {
+  height : 150px;
+  width : 150px;
+  color : #FFFFFF;
+  background-color : rgb(255,255,255);
+  text-align : center;
+  vertical-align : middle;
+  line-height: 150px;
+  display:inline-block;
+  
+}
+
+.vert1 {
+  background-color : rgb(0,255,0);
+  position : absolute;
+  top:40px;
+  left:40px;
+}
+
+.bleu1 {
+  background-color : rgb(0,0,255);
+  position : absolute;
+  top:70px;
+  left:70px;
+}
+
+.rouge1 {
+  background-color : rgb(255,0,0);
+  position : absolute;
+  left: 10px
+}
+  
+.vert2 {
+  background-color : rgb(0,255,0);
+  position : relative;
+  top:30px;
+  left:30px;
+}
+
+.bleu2 {
+  background-color : rgb(0,0,255);
+  position : relative;
+  top:30px;
+  left:30px;
+}
+
+.rouge2 {
+  background-color : rgb(255,0,0);
+  position : absolute;
+  left:300px; 
+}
+
+
+#general3 {
+  height : 300px;
+  width : 300px;
+  color : #000000;
+  background-color : rgb(0,0,0);
+    position : absolute;
+  left:600px; 
+}
+.vert3 {
+  background-color : rgb(0,255,0);
+  position : relative;
+  top:150px;
+  left:0px;
+}
+
+.bleu3 {
+  background-color : rgb(0,0,255);
+  position : relative;
+  top:0px;
+  left:150px;
+}
+
+.rouge3 {
+  background-color : rgb(255,0,0);
+  position : relative;
+  top: 0px;
+  left:0px;
+}
+  
+.bleurouge {
+  background-color : rgb(255,0,255);
+  position : relative;
+  top:-150px;
+  left:0px;
+}
+
+
+#general4 {
+  height : 300px;
+  width : 300px;
+  color : #000000;
+  background-color : rgb(0,0,0);
+    position : absolute;
+  top:250px; 
+}
+.vert4 {
+  background-color : rgb(0,255,0);
+  position : relative;
+  top:0px;
+  left:px;
+}
+
+.bleu4 {
+  background-color : rgb(0,0,255);
+  position : relative;
+  top:-150px;
+  left:150px;
+}
+
+.rouge4 {
+  background-color : rgb(255,0,0);
+  position : relative;
+  top: 0px;
+  left:0px;
+}
+  
+.bleurouge4 {
+  background-color : rgb(255,0,255);
+  position : relative;
+  top:-450px;
+  left: 150px;
+}
+
+
+#general5 {
+  height : 300px;
+  width : 300px;
+  color : #000000;
+  background-color : rgb(0,0,0);
+  position : absolute;
+  top:350px;
+  left: 350px;
+
+}
+.vert5 {
+  background-color : rgb(0,255,0);
+  position : relative;
+  top:0px;
+  left:0px;
+}
+
+.bleu5 {
+  background-color : rgb(0,0,255);
+  position : relative;
+  top:0px;
+  left:0px;
+}
+
+.rouge5 {
+  background-color : rgb(255,0,0);
+  position : relative;
+  top: 0px;
+  left:0px;  
+}
+  
+.bleurouge5 {
+  background-color : #B4D455;
+  position : relative;
+  top:0px;
+  left: 0px;
+  border-radius:75px/12px;
+}
+
