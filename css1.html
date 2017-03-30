@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<!-- commentaire-->
+  <head>
+    <meta charset="utf-8"/>
+    <title> HTML pour débutant</title>
+    <link href="reset.css" rel="stylesheet" type="text/css"/>
+    <link href="style_essai1.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+  
+    <div class="wrapper">
+
+      <header>
+        <h1>Le béaba du CSS</h1>
+        <p>Ce site internet est mon premier site, soyez indulgent et n'hésitez pas à me proposer vos idées pour son amélioartion. Bonne navigation !</p>
+      </header>
+      
+      <footer class="avec_padding">
+
+        <p>Votre publicité ici sur mon site.</p>
+      </footer>
+      
+      <nav class="avec_padding">
+        <ul class="liste_navigation">
+          <li><a href="#preambule">Préambule</a></li>
+          <li><a href="#les_selecteurs">Les sélecteurs</a></li>
+          <li><a href="#les_unites">Les unités</a></li>
+          <li><a href="#le_positionnement">Le positionnement</a></li>
+          <li><a href="#les_images">Les images</a></li>
+          <li><a href="#la_flexbox">La Flexbox</a></li>
+          <li><a href="les_pseudos_classes">Les pseudos-classes</a></li>         
+        </ul>
+      </nav>
+      
+      <aside class="avec_padding">
+        <p>Liste de liens utiles pour aller plus loin :</p>
+        <ul class="liste_navigation">
+          <li><a href="https://developer.mozilla.org/fr/docs/Web/css">"developer.mozilla.org/fr/docs/Web/css"</a></li>
+        </ul>
+      </aside>
+      
+      <section class="avec_padding">
+      
+      <h2 id="preambule">Préambule</h2>
+        <p>un fichier HTML est généralement complété par une feuille de style au format css.
+        cette feuille permet de définir la mise en page et le rendu final du document. 
+        Une feuille resest.css peut être également utilisé de manière à supprimer les valeurs par défaults qui à tendance à varier en fonction du navigateur utilisé.
+        Les principaux navigateur utilisés actuellement (2017) sont : Chrome, Firefox, Edge, Explorer et Opera.
+        Pour faire le lien avec une feuille de style css, le fichier HTML doit avoir dans sa partie &lt;head&gt; une ligne de ce type :
+        </p>
+        <pre>&ltlink href="reset.css" rel="stylesheet" type="text/css"/&gt
+&ltlink href="style_essai1.css" rel="stylesheet" type="text/css"/&gt
+        </pre>
+    
+      <h2 id="les_selecteurs">Les sélecteurs</h2>
+      
+        <p>Les sélecteurs permettent d'appliquer des propriétés à des endroits spécifiquement définit par les sélecteurs.
+        Les types de sélecteurs sont : 
+        </p>
+        <ul class="liste_non_ordonnee">
+          <li>type : nomélément</li>
+          <li>classe : .classe</li>
+          <li>identifiant : #identifiant</li>
+          <li>universel : *</li>
+          <li>attribut : [attr] [attr=valeur]</li>
+        </ul>
+        <p>Ces sélecteurs peuvent être combinés à l'aide de combinateurs.
+        Les types de combinateurs sont :
+        </p>        
+        <ul class="liste_non_ordonnee">
+          <li>+ : sélecteur de voisin direct</li>
+          <li>~ : sélecteur de voisin</li>
+          <li>> : sélecteur d'éléments fils</li>
+          <li>' ' (le caractère espace) : sélecteur de descendants</li>
+        </ul>
+        <p>Plus d'informations peuvent être trouvées <a href="https://developer.mozilla.org/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS">ici</a>
+        </p>
+        
+    
+    <h2 id="les_unites">Les unités</h2>
+      
+        <p>Il est recommandé d'utiliser pour un affichage écran les unités relatives à la taille de l'écran avec : em et  %. 
+        Si l'on désire une unité fixe px est alors recommandée.
+        </p>
+        <p>Plus d'informations peuvent être trouvées <a href="https://www.w3.org/Style/Examples/007/units.fr.html">ici</a>
+        et <a href="https://www.w3.org/TR/css3-values/#lengths">là</a> pour encore plus de détails sur le fonctionnement des ces unités.
+        </p>
+      
+      
+    <h2 id="le_positionnement">Le positionnement</h2>
+      <p>De manière générale, il est conseillé de penser à des boites que l'on empile soit en ligne, soit en colonne.
+      Ces empilements peuvent se faire de manière absolue (raisonnement par la distance par rapport l'endroit ou l'élément serait placer lors d'un empilement standars), 
+      soit en relatif (raisonnement par la position d'un élement par rapport à son précédent).
+      les éléments sont empilés en ligne ou en colonne.
+      un exemple de fichier <a href="essai_css.txt">HTML</a> et du fichier <a href="style.txt">CSS</a>
+      avec le rendu <a href="essai_css.html">final</a> sont disponible en cliquant sur les liens. 
+      </p>
+      <p>Remarque : chaque boite à une marge externe (margin), une bordure (border) et une marge interne (padding) qu'il faut prendre en compte lors du positionnement.
+      </p>
+      <p>2nd Remarque : La commande overflow : scroll; permet d'obtenir une barre de déroulement.
+      </p>
+        
+      
+    <h2 id="la_flexbox">La Flexbox</h2>
+
+      <p> L'utilisation de l'outil flexbox permet grandement de se simplifier la tâche pour le positionnement.
+      Des détails sur sont utilisation peuvent être trouvés <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">ici</a>.
+      Etant donné que ce site utilise cet outil, sont fichier css peut également servir d'<a href="style_essai1.txt">exemple</a>.
+      </p>
+    <h2 id="les_images">Les images</h2>
+      <p>Les formats à privilégier sont : .jpeg pour les photos, .png pour les schémas (ce format gère les transparance), et .gif pour les animations
+      </p>      <p>Remarque : il faut faire attention à la taille de l'image utilisée de manière à ne pas surcharger la bande passante lors du chargement de la page.
+      </p>
+
+      
+    <h2 id="les_pseudos_classes">Les pseudos-classes et les pseudos-éléments</h2>
+        
+      <p>Une pseudo-classe est un mot-clé qui peut être ajouté aux sélecteurs afin d'indiquer l'état spécifique dans lequel l'élément doit être pour être ciblé par la déclaration. 
+      La pseudo-classe :hover, par exemple, permettra d'appliquer une mise en forme spécifique lorsque l'utilisateur survole l'élément ciblé par le sélecteur.
+      </p>
+      
+      <p> Un exemple de pseudo-classe est hover qui permet d'effectuer une action lorsque la souris passe sur l'élément.
+      Un exemple est donné dans le fichier css que vous avez déjà vu (celui avec les carrés de différentes couleurs) regarder bien entre les ligne 40 et 50.
+      Je suis gentil je vous redonne le lien du fichier <a href="style.txt">CSS</a> et du rendu <a href="essai_css.html">final</a>.
+      
+      </p>
+      
+      <p>
+      Le site de MDN est particulièrement clair et bien organisé sur le sujet. Je vous invite donc à vous y référer.
+      </p>
+      
+      <p>Les informations sur les pseudos-classes peuvent être trouvés <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes">ici</a>.
+      </p>
+
+      <p>Les informations sur les pseudos-éléments peuvent être trouvés <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments">ici</a>.
+      </p>
+      
+      
+      
+      
+      </section>
+  
+  </div>
+  </body>
+ </html>
+  
+  
+  
+

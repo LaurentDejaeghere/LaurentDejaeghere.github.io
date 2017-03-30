@@ -8,15 +8,19 @@
     <link href="style_essai1.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <h1>Le béaba du HTML</h1>
+    <div class="wrapper">
+
     <header>
+      <h1>Le béaba du HTML</h1>
       <p>Ce site internet est mon premier site, soyez indulgent et n'hésitez pas à me proposer vos idées pour son amélioartion. Bonne navigation !</p>
     </header>
-    <footer>
+    
+    <footer class="avec_padding">
       <p>Votre publicité ici sur mon site.</p>
     </footer>
-    <nav>
-      <ul>
+    
+    <nav class="avec_padding">
+      <ul class="liste_navigation">
         <li><a href="#les_premieres_lignes">Les premières lignes</a></li>
         <li><a href="#la_declaration_de_titre">La déclaration de titres</a></li>
         <li><a href="#la_mise_en_valeur_de_certains_termes">La mise en valeur de certains termes</a></li>
@@ -29,7 +33,15 @@
         <li><a href="#les_tableaux">Les tableaux</a></li>
       </ul>
     </nav>
-    <section>
+    
+    <aside class="avec_padding">
+      <p>Liste de liens utiles pour aller plus loin :</p>
+      <ul class="liste_navigation">
+        <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML">"developer.mozilla.org/fr/docs/Web/HTML"</a></li>
+      </ul>
+    </aside>
+    
+    <section class="avec_padding">
       <h2 id="les_premieres_lignes">Les premières lignes</h2>
         <p>
           le document html doit commencer par l'intitulé :  &lt;!doctype html&gt;. 
@@ -56,30 +68,32 @@
         <p> Le <strong>titre</strong> est indiqué par la balise &lt;h1&gt; et se termine par la balise &lt;/h1&gt;.</p>
         <p> Les différents niveaux de sous-titre sont déclaré de la même manière à partir de h2 jusqu'à h6. Voici ci-dessous un exemple d'affichage</p>
         
-      <h2> plusieurs h2 par document, la balise &lt;h2&gt; est pour les paragraphes</h2>
-        <h3> plusieurs h3 par document, la balise &lt;h3&gt; est pour les sous paragraphes </h3>
-          <p>Mon texte</p>
-          <h4> plusieurs h4 par document, la balise &lt;h4&gt; est pour les sous sous paragraphes </h4>
+      <div class="exemple">
+        <h2> plusieurs h2 par document, la balise &lt;h2&gt; est pour les paragraphes</h2>
+          <h3> plusieurs h3 par document, la balise &lt;h3&gt; est pour les sous paragraphes </h3>
             <p>Mon texte</p>
-            <h5> plusieurs h5 par document </h5>
+            <h4> plusieurs h4 par document, la balise &lt;h4&gt; est pour les sous sous paragraphes </h4>
               <p>Mon texte</p>
-              <h6> plusieurs h6 par document, la balise &lt;h6&gt; est la dernière indentation de paragraphe possible </h6>
+              <h5> plusieurs h5 par document </h5>
                 <p>Mon texte</p>
+                <h6> plusieurs h6 par document, la balise &lt;h6&gt; est la dernière indentation de paragraphe possible </h6>
+                  <p>Mon texte</p>
+       </div>
                
       <h2 id="la_mise_en_valeur_de_certains_termes">La mise en valeur de certains termes</h2>
-        <p>Il est possible de mettre en <em> importance</em> un terme grace à la balise &lt;em&gt; </p>
-        <p> Quelque chose d'encore plus <strong> important </strong> sera donnée par la balise strong </p>
-        <p>Par contre, une chose moins <mark> importante </mark> sera qualifiée par la balise mark </p>
+        <p>Il est possible de mettre en <em class="importance"> importance</em> un terme grace à la balise &lt;em&gt;. </p>
+        <p> Quelque chose d'encore plus <strong> important </strong> sera donnée par la balise strong. </p>
+        <p>Par contre, une chose moins <mark> importante </mark> sera qualifiée par la balise mark. </p>
       <h2>les listes</h2>
     
-        <p>Il existe deux type de listes : ordonnées avec des chiffres, et désordonnées avec des puces. En voici des exemples</p> 
+        <p>Il existe deux type de listes : ordonnées avec des chiffres, et désordonnées avec des puces. En voici des exemples : </p> 
 
-        <ol>
+        <ol class="liste_ordonnee">
           <li>1ère liste ordonnée crée avec la balise avec la balise &lt;li&gt; </li>
           <li>2nd liste ordonnée crée avec la balise avec la balise &lt;li&gt; </li>
           <li>les listes ordonnées commencent par une balise &lt;ol&gt; (ordered list)</li>
         </ol>
-        <ul>
+        <ul class="liste_non_ordonnee">
           <li>1ère liste  non-ordonnée crée avec la balise avec la balise &lt;li&gt; </li>
           <li>2nd liste  non-ordonnée crée avec la balise avec la balise &lt;li&gt; </li>
           <li>les listes non-ordonnées commencent par une balise &lt;ul&gt; (unordered list) </li>
@@ -121,11 +135,11 @@ permet de garder les sauts de ligne,    tabulations, etc.
         </p>
         <p>Exemple : &lt;a href="<em>#</em>"chemin_du_lien_du_document"&gt;"texte_sur_lequel_il_faut_cliquer_pour_activer_le_lien"&lt;/a&gt;</p>
         <p>De la même manière, il est possible de créer un lien sur une balise d'une autre page : </p>
-        <p>Exemple : &lt;a href="http://mon_url.html<em>#</em>"chemin_du_lien_du_document"&gt;"texte_sur_lequel_il_faut_cliquer_pour_activer_le_lien"&lt;/a&gt;</p>     
+        <p>Exemple : <code>&lt;a href="http://mon_url.html<em>#</em>"chemin_du_lien_du_document"&gt;"texte_sur_lequel_il_faut_cliquer_pour_activer_le_lien"&lt;/a&gt; </code></p>     
         <p>Un autre attribut de la balise &lt;a&gt; est l'attribut target. Cet attribut indique où afficher la ressource liée. 
         Il s'agit du nom, ou du mot-clé, d'un contexte de navigation (exemple : onglet, fenêtre, frameset). 
         Les mots-clés suivants ont un sens particulier :
-        <ul>
+        <ul class="liste_non_ordonnee">
           <li>_blank : charge la réponse dans un nouveau contexte de navigation (nouvel onglet : <a href="lien_un.html" target="_blank">"mon premier lien"</a>).C'est le plus utilisé.</li>
           <li>_self : charge la réponse dans le contexte de navigation courant. Il s'agit de la valeur par défaut quand l'attribut n'est pas renseigné.</li>
           <li>_parent : charge la réponse dans le &lt;frameset&gt; dans le contexte de navigation HTML5 parent relativement au contexte courant. S'il n'y a pas de parent, l'option se comporte de la même façon que _self.</li>
@@ -142,7 +156,7 @@ permet de garder les sauts de ligne,    tabulations, etc.
         une partie reservée aux choses annexes telles que les pubs
         ou les définitions de mots particuliers, et enfin le bas de page.
         </p>
-        <ul>
+        <ul class="liste_non_ordonnee">
           <li>L'en-tête est positionné à l'aide de la balise &lt;header&gt; &lt;/header&gt;</li>
           <li>Le menu de navigation est positionné à l'aide de la balise &lt;nav&gt; &lt;/nav&gt;</li>
           <li>La partie centrale de la page est positionnée à l'aide des balise &lt;section&gt; &lt;/section&gt; et &lt;article&gt; &lt;/article&gt;</li>
@@ -152,15 +166,15 @@ permet de garder les sauts de ligne,    tabulations, etc.
       
       <h2 id="les_images">Les images</h2>
       
-        <p>Il est possible d'afficher des images à l'aide d'une balise &lt;img src="chemin_d'acces_de_l_image"&gt; alt="description_de_l_image"&gt;</p>
-        <img src="dragon.jpg" alt="Une belle image de dragon récupérée sur le net">
+        <p>Il est possible d'afficher des images à l'aide d'une balise &lt;img src="chemin_d'acces_de_l_image" alt="description_de_l_image"&gt;</p>
+        <img class="image" src="dragon.jpg" alt="Une belle image de dragon récupérée sur le net">
         <p>Remarque : la description de l'image est afficher en cas de problèmes d'affichage de l'image et est utilisé par les robots de lecture html.</p>    
         <p>il parait cependant que les chatons sont plus populaire</p>
-        <img src="chat_shreck.jpg" alt="Le chat de shreck">
+        <img class="image" src="chat_shreck.jpg" alt="Le chat de shreck">
         <p>Nous resterons donc neutre sur ce site en affichant une image plus traditionnelle</p>      
-        <img src="starwars.jpg" alt="image de starwars">
+        <img class="image" src="starwars.jpg" alt="image de starwars">
         <p>Remarque : cette balise marche aussi pour les .gif</p>
-        <img src="chaussures.gif" alt="image de chaussures qui marchent toutes seules">
+        <img class="image" src="chaussures.gif" alt="image de chaussures qui marchent toutes seules">
       
       <h2 id="les_tableaux">Les Tableaux</h2>
         
@@ -177,7 +191,7 @@ permet de garder les sauts de ligne,    tabulations, etc.
           &lt;caption&gt;Ma légende du tableau&lt;/caption&gt;
           &lt;thead&gt;
             &lt;tr&gt;
-              &lt;th&gt;rowspan="1" colspan="2"&gt;Arisochat&lt;/th&gt;
+              &lt;th rowspan="1" colspan="2"&gt;Arisochat&lt;/th&gt;
               &lt;th&gt;Bateau sur l'eau&lt;/th&gt;
               &lt;th&gt;C'est marrant&lt;/th&gt;
             &lt;/tr&gt;
@@ -225,7 +239,7 @@ permet de garder les sauts de ligne,    tabulations, etc.
           <caption>Ma légende du tableau</caption>
           <thead>
             <tr>
-              <th>rowspan="1" colspan="2">Arisochat</th>
+              <th rowspan="1" colspan="2">Arisochat</th>
               <th>Bateau sur l'eau</th>
               <th>C'est marrant</th>
             </tr>
@@ -268,18 +282,10 @@ permet de garder les sauts de ligne,    tabulations, etc.
             <td>Journée difficile</td>
           </tr>
         </table>
-    
-      
       
       </section>
-    <aside>
-      <p>Liste de liens utiles pour aller plus loin :</p>
-      <ul>
-        <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML">"developer.mozilla.org/fr/docs/Web/HTML"</a></li>
-      </ul>
-    </aside>
 
-
+    </wrapper>
   </body>
 </html>
   
