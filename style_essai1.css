@@ -10,6 +10,10 @@
 
 }
 
+body{
+  background-image : url(fond-ecran-chat.jpg);
+}
+
 /* sans flex
 section{
   background-color : white;

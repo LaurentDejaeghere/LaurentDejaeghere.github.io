@@ -31,6 +31,7 @@
         <li><a href="#le_sectionnement_de_la_page">Le sectionnement de la page</a></li>
         <li><a href="#les_images">Les images</a></li>
         <li><a href="#les_tableaux">Les tableaux</a></li>
+        <li><a href="les_formulaires">Les formulaires</a></li>
       </ul>
     </nav>
     
@@ -282,6 +283,111 @@ permet de garder les sauts de ligne,    tabulations, etc.
             <td>Journée difficile</td>
           </tr>
         </table>
+        
+      <h2 id="les_formulaires">Les formulaires</h2>
+        <p>La création de formulaire demande 
+        </p>
+        <p> un formulaire comprend une balise form qui comprend nécessairement comme attribut action="" et méthod="" (en cas de doute pour method, choisir post)</p>
+        <p>Dans cette balise form, il faut une balise label avec un attribut for="". Cela permet de mettre du texte devant le formulaire </p>
+        
+        
+        
+        <p>exemple :
+        </p>
+          <form action="" method=""> <!-- en cas de doute pour method, choisir post-->
+            <label for="name">
+              Nom:
+            </label>
+            
+            <input type="text" name="user_name"id="none" valeur="val1"/>
+            
+            <label for="mail">
+              Courriel:
+            </label>
+            
+            <input type="mail" name="user_name"id="none1" valeur="val1"/>
+            
+            <label for="commentaire">
+              Commentaire
+            </label>
+            <textarea type="text" name="user_name"id="none2">
+            </textarea>
+            
+            <button type="submit">
+                Envoyer
+            </button>
+            <button type="reset">
+                Tout effacer
+            </button>
+            <p>Il existe des boutons checkbox et des radios</p>
+            <label for="checkbox1">
+              détruire le monde
+            </label>
+            <input type="checkbox" name="user_name"id="checkbox1" valeur="val1"/>
+            <label for="radio1">
+              sauvegarder la nature
+            </label>
+            <input type="radio" name="user_name1"id="radio1" valeur="val1"/>
+            
+            <fieldset>
+              <legend>groupe de puce</legend>
+              <label for="radio2">
+                gagner un million
+              </label>
+              <input type="radio" name="user_name2"id="radio2" valeur="val1"/>
+              <label for="radio3">
+                être heureux
+              </label>
+              <input type="radio" name="user_name2"id="radio3" valeur="val2"/>
+              <label for="radio4">
+                rendre les autres heureux
+              </label>
+              <input type="radio" name="user_name2"id="radio4" valeur="val3"/>
+            </fieldset>
+            
+            <p>Les menus déroulants sont créés à l'aide de la balise select
+            <select name="menu_deroulant">
+              <option value="1"><!--value est ce qui renvoyer au serveur -->
+                Choix n°1
+              </option>
+              
+            </select>
+            
+            <select name="menu_deroulant1" multiple><!--la présence de multiple permet d'afciher un select multiple -->
+              <option value="1"><!--value est ce qui renvoyer au serveur -->
+                Choix n°1
+              </option>
+              <option value="2"><!--value est ce qui renvoyer au serveur -->
+                Choix n°2
+              </option>
+              <option value="3"><!--value est ce qui renvoyer au serveur -->
+                Choix n°3
+              </option>
+              
+            </select>
+            
+            
+            <select name="menu_deroulant2" multiple><!--la présence de multiple permet d'afciher un select multiple -->
+              <optgroup label="groupe1">
+              
+              <option value="1"><!--value est ce qui renvoyer au serveur -->
+                Choix n°1
+              </option>
+              <option value="2"><!--value est ce qui renvoyer au serveur -->
+                Choix n°2
+              </option>
+              </optgroup>
+              <option value="3"><!--value est ce qui renvoyer au serveur -->
+                Choix n°3
+              </option>
+              
+            </select>
+            
+            
+ 
+          </form>
+          
+        
       
       </section>
 
