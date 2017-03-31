@@ -81,7 +81,7 @@ header{
 .wrapper {
 
   display: flex;
-  flex-flow: row wrap;
+  /*flex-flow: row wrap; identique à la ligne du dessous*/
   flex-wrap:  wrap;
   text-align: justify;
   align-content: space-between;
@@ -241,14 +241,92 @@ code{
   font-family: "Courier", monospace;
 }
 
+.class_form{
+  display: flex;
+  margin:1%;
+  background-color: #888888;
+  padding:1%;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-content: space-around;
+  
+}
 
+.formulaire{
+  background-color: #CCCCCC;
+  padding: 2%;
+  margin: 1%;
+}
 
+.formul{
+  width: 30%;
+}
+.box{
+  width: 35%;
+}
 
+.deroulant{
+  width: 15%;
+}
 
+.bouton{
+  width: 95%;
+  margin: 10px;
+  padding: 5px;
+  text-align: center ;
+}
 
+.formulaire p{
+  margin: 10%;   
+}
 
+.boxing {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000FF;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
 
+.boxing:hover {
+  background-color: #FFCCCC;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 
+.dino{
+  display: block;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.dino:hover{
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  
+}
+
+.anim{
+  animation-duration:8s;
+  animation-name:slidein;
+  animation-iteration-count: infinite;
+  animation-direction:alternate;
+}
+
+@keyframes slidein{
+  from{
+    margin-left: 110%;
+  }
+  to{
+    margin-left: 0%;
+  }
+  
+}
 
 
 

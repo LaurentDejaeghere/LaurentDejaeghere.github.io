@@ -287,109 +287,158 @@ permet de garder les sauts de ligne,    tabulations, etc.
       <h2 id="les_formulaires">Les formulaires</h2>
         <p>La création de formulaire demande 
         </p>
-        <p> un formulaire comprend une balise form qui comprend nécessairement comme attribut action="" et méthod="" (en cas de doute pour method, choisir post)</p>
-        <p>Dans cette balise form, il faut une balise label avec un attribut for="". Cela permet de mettre du texte devant le formulaire </p>
+        <p>Un formulaire comprend une balise &lt;form&gt; qui comprend nécessairement comme attribut action="" et méthod="" (en cas de doute pour method, choisir post)</p>
+        <p>Dans cette balise &lt;form&gt;, il faut une balise &lt;label&gt; avec un attribut for="". Cela permet de mettre du texte devant le formulaire </p>
+        <p>La balise &lt;label&gt; doit être suivie d'une balise de type input qui doit comprendre un attribut type="", name="",valeur"" et il est préférable de lui rajouté un attirbut id="" </p>
+        <p>Un input peut être rendu obligatoire avec l'attribut required.</p>
+        <p>Un input peut être limiter en terme de taille par l'attribut maxlength="120" qui, ici, limite à 120 caractère.</p>
+        <p>les types les plus courants pour input sont : </p>
+        <ul class="liste_non_ordonnee">
+          <li>"text"</li>
+          <li>"mail"</li>
+          <li>"radio"</li>
+          <li>"checkbox"</li>
+          <li>"date"</li>
+        </ul>
+        <p>Il est possible d'avoir un champ de text plus important (et plus modulable) en échangeant un input par un textarea</p>
         
-        
-        
-        <p>exemple :
+        <p>Afin de soumettre le formulaire rempli, il peut être intéressant d'utiliser un bouton. 
+        la balise &lt;button&gt; utilise un attribut type="submit" ou type="reset".
+        <p>Il est courant de vouloir utiliser plusieurs "checkbox" ou plusieurs "radio" dans une même liste. 
+        Pour cela on encapsule les balises &lt;input&gt; dans une balise &lt;fieldset&gt;. On y ajoute généralement une balise &lt;legend&gt;.
         </p>
-          <form action="" method=""> <!-- en cas de doute pour method, choisir post-->
-            <label for="name">
-              Nom:
-            </label>
-            
-            <input type="text" name="user_name"id="none" valeur="val1"/>
-            
-            <label for="mail">
-              Courriel:
-            </label>
-            
-            <input type="mail" name="user_name"id="none1" valeur="val1"/>
-            
-            <label for="commentaire">
-              Commentaire
-            </label>
-            <textarea type="text" name="user_name"id="none2">
-            </textarea>
+        <p>Les menus déroulants sont également très utilisé. Ils sont déclarés par la balise &lt;select&gt; dans laquelle on ajoute des balises &lt;option&gt; associer à l'attribut value="" qui permet au seveur de savoir quel est le choix effectuer.
+        Il est possible de faire des gourpes dans les menus dérulant en encapsulant les balises &lt;options&gt; par une balise de ce type &lt;optgroup label="groupe1"&gt;
+        </p>
+        <p>Plus de détails peuvent être trouvés sur ce lien : <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">"widgets"</a> 
+        
+        <p>Au cas où, voici quand même quelques exemples :
+        </p>
+        
+        <form action="" method="" class="class_form"> <!-- en cas de doute pour method, choisir post-->
+          <div class="formulaire formul">
+          <p>Formulaire</p>
+            <p>
+              <label for="name">
+                Nom:
+              </label> 
+              <input type="text" name="user_name"id="none" valeur="val1" required/>
+            </p>
+            <p>
+              <label for="mail">
+                Courriel:
+              </label>
+              
+              <input type="mail" name="user_name"id="none1" valeur="val1" maxlength="120"/>
+            </p>
+            <p>
+              <label for="commentaire">
+                Commentaire
+              </label>
+              <textarea type="text" name="user_name"id="none2">
+              </textarea>
+            </p>
+            <p>
+              <label for="date">
+                Date
+              </label>
+              <input type="date"/>
+            </p>
+         
+          </div>
+          
+          <div class="formulaire box">
+            <p>Boutons checkbox et radios</p>
+            <p>
+              <input type="checkbox" name="user_name"id="checkbox1" valeur="val1"/>
+              <label for="checkbox1">
+                détruire le monde
+              </label>
+            </p>
+            <p>
+              <input type="radio" name="user_name1"id="radio1" valeur="val1"/>
+              <label for="radio1">
+                sauvegarder la nature
+              </label>
+            </p>
+            <p>
+            <fieldset>
+              <legend>groupe de puce</legend>
+              <p>
+                <input type="radio" name="user_name2"id="radio2" valeur="val1"/>
+                <label for="radio2">
+                  gagner un million
+                </label>
+              </p>
+              <p>
+                <input type="radio" name="user_name2"id="radio3" valeur="val2"/>
+                <label for="radio3">
+                  être heureux
+                </label>
+              </p>
+              <p>
+                <input type="radio" name="user_name2"id="radio4" valeur="val3"/>
+                <label for="radio4">
+                  rendre les autres heureux
+                </label>
+              </p>
+            </fieldset>
+          </div>
+          <div class="formulaire deroulant">
+            <p>Les menus déroulants</p>
+            <p>
+              <select name="menu_deroulant">
+                <option value="1"><!--value est ce qui renvoyer au serveur -->
+                  Choix n°1
+                </option>
+              </select>
+            </p>
+            <p>
+              <select name="menu_deroulant1" multiple><!--la présence de multiple permet d'afciher un select multiple -->
+                <option value="1"><!--value est ce qui renvoyer au serveur -->
+                  Choix n°1
+                </option>
+                <option value="2"><!--value est ce qui renvoyer au serveur -->
+                  Choix n°2
+                </option>
+                <option value="3"><!--value est ce qui renvoyer au serveur -->
+                  Choix n°3
+                </option>
+              </select>
+            </p>
+            <p>
+              <select name="menu_deroulant2" multiple><!--la présence de multiple permet d'afciher un select multiple -->
+                <optgroup label="groupe1">
+                  <option value="1"><!--value est ce qui renvoyer au serveur -->
+                    Choix n°1
+                  </option>
+                  <option value="2"><!--value est ce qui renvoyer au serveur -->
+                    Choix n°2
+                  </option>
+                </optgroup>
+                
+                <option value="3"><!--value est ce qui renvoyer au serveur -->
+                  Choix n°3
+                </option>
+              </select>
+            </p>
+          </div>
+ 
+          <div class="formulaire bouton">
             
             <button type="submit">
                 Envoyer
             </button>
-            <button type="reset">
+            
+            <button type="reset" oncommand="alert('Vous avez appuyé.');">
                 Tout effacer
             </button>
-            <p>Il existe des boutons checkbox et des radios</p>
-            <label for="checkbox1">
-              détruire le monde
-            </label>
-            <input type="checkbox" name="user_name"id="checkbox1" valeur="val1"/>
-            <label for="radio1">
-              sauvegarder la nature
-            </label>
-            <input type="radio" name="user_name1"id="radio1" valeur="val1"/>
-            
-            <fieldset>
-              <legend>groupe de puce</legend>
-              <label for="radio2">
-                gagner un million
-              </label>
-              <input type="radio" name="user_name2"id="radio2" valeur="val1"/>
-              <label for="radio3">
-                être heureux
-              </label>
-              <input type="radio" name="user_name2"id="radio3" valeur="val2"/>
-              <label for="radio4">
-                rendre les autres heureux
-              </label>
-              <input type="radio" name="user_name2"id="radio4" valeur="val3"/>
-            </fieldset>
-            
-            <p>Les menus déroulants sont créés à l'aide de la balise select
-            <select name="menu_deroulant">
-              <option value="1"><!--value est ce qui renvoyer au serveur -->
-                Choix n°1
-              </option>
-              
-            </select>
-            
-            <select name="menu_deroulant1" multiple><!--la présence de multiple permet d'afciher un select multiple -->
-              <option value="1"><!--value est ce qui renvoyer au serveur -->
-                Choix n°1
-              </option>
-              <option value="2"><!--value est ce qui renvoyer au serveur -->
-                Choix n°2
-              </option>
-              <option value="3"><!--value est ce qui renvoyer au serveur -->
-                Choix n°3
-              </option>
-              
-            </select>
-            
-            
-            <select name="menu_deroulant2" multiple><!--la présence de multiple permet d'afciher un select multiple -->
-              <optgroup label="groupe1">
-              
-              <option value="1"><!--value est ce qui renvoyer au serveur -->
-                Choix n°1
-              </option>
-              <option value="2"><!--value est ce qui renvoyer au serveur -->
-                Choix n°2
-              </option>
-              </optgroup>
-              <option value="3"><!--value est ce qui renvoyer au serveur -->
-                Choix n°3
-              </option>
-              
-            </select>
-            
-            
- 
-          </form>
+          </div>
+        </form>
           
-        
       
       </section>
+        
 
     </wrapper>
   </body>
